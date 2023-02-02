@@ -45,3 +45,7 @@ require __DIR__ . '/auth.php';
 
 
 //rotte Vue (sempre a piè pagina)
+Route::get('{any?}', function(){
+    return view('guest.home');
+    //oltre a restituire la rotta home, spiegare che any intende qualsiasi cosa
+})->where('any', '.*' )->name('home');

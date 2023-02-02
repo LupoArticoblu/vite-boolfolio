@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import home from './pages/home.vue';
 import contacts from './pages/contacts.vue';
 import About from './pages/About.vue';
+import Err from './pages/Err.vue';
 
 const router = createRouter({
 
@@ -22,6 +23,10 @@ const router = createRouter({
       path: '/contatti',
       name: 'contacts',
       component: contacts
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: Err
     }
   ]
 });
