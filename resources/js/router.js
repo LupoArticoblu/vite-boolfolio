@@ -4,9 +4,10 @@ import home from './pages/home.vue';
 import contacts from './pages/contacts.vue';
 import About from './pages/About.vue';
 import Err from './pages/Err.vue';
+import Recenti from './pages/Recenti.vue';
 
 const router = createRouter({
-
+  linkExactActiveClass: 'active',
   history: createWebHistory(),
   routes: [
     {
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/contatti',
       name: 'contacts',
       component: contacts
+    },
+    {
+      path:'/recenti',
+      name:'Recenti',
+      component: Recenti
     },
     {
       path: '/:pathMatch(.*)*',

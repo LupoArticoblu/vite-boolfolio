@@ -1,12 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 
-.container{
+.container {
   width: 90%;
   max-width: 1200px;
   margin: 30px auto;
 }
 
-.pag{
+.pag {
   position: absolute;
   bottom: 0px;
+}
+
+main {
+  padding: 12px;
+  box-shadow: 0 0 5px #126782;
+  color: #FFB703;
+  background-color: #219EBC;
+  border-radius: 5px;
 }

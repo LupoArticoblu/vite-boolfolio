@@ -1,12 +1,12 @@
 <script>
   export default{
-    name:'home'
+    name:'Recenti'
   }
 </script>
 
 <template>
 
-<h1>Home</h1>
+<h1>File recenti</h1>
 </template>
 
 <style>

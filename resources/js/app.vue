@@ -1,9 +1,11 @@
 <script>
-import header from './pages/partials/header.vue';
+import Header from "./pages/partials/Header.vue"
 
 export default {
   name: 'App',
-  
+  components: {
+    Header
+  }
 }
 
 </script>
@@ -11,12 +13,15 @@ export default {
 <template>
   <div class="container">
 
-    <router-view>
+    <Header></Header>
 
-    </router-view>
+    <main>
+      <!-- tutte le viste vue nel router -->
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
