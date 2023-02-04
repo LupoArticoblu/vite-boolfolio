@@ -26,4 +26,5 @@ Route::namespace('Api')
     ->group(function () {
 
         Route::get('/', [PortfolioController::class, 'index']);
+        Route::get('/{slug}', [PortfolioController::class, 'show']);
     });

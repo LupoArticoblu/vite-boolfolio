@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  
 
     
     <h1>Lista portfolios con vue</h1>
@@ -68,7 +68,7 @@ export default {
       <button class="btn btn-primary" :disabled="pagination.current === pagination.last"
         @click="getApi(pagination.current + 1)"> &rarr; </button>
     </div>
-  </div>
+  
 </template>
 
 <style>

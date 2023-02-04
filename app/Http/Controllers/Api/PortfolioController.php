@@ -13,4 +13,11 @@ class PortfolioController extends Controller
         
         return response()->json(compact('portfolios'));
     }
+    public function show($slug){
+        $portfolio = Portfolio::where('slug', $slug)->with(['category', 'tags'])->first();
+
+        return response()->json(compact('portfolio'));
+        
+    }
 }
+

@@ -5,6 +5,7 @@ import contacts from './pages/contacts.vue';
 import About from './pages/About.vue';
 import Err from './pages/Err.vue';
 import Recenti from './pages/Recenti.vue';
+import Show from './pages/Show.vue';
 
 const router = createRouter({
   linkExactActiveClass: 'active',
@@ -29,6 +30,11 @@ const router = createRouter({
       path:'/recenti',
       name:'Recenti',
       component: Recenti
+    },
+    {
+      path: '/recenti/show/:slug',
+      name: 'Show',
+      component: Show
     },
     {
       path: '/:pathMatch(.*)*',
