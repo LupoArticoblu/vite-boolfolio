@@ -14,6 +14,8 @@ export default{
       axios.get(baseUrl + 'portfolios/' + this.$route.params.slug)
         .then(result => {
           this.portfolio = result.data;
+          console.log(result.data);
+          console.log('->' + this.$route.params.slug);
         });
     }
   },
@@ -27,6 +29,15 @@ export default{
 <template>
   <div >
     <h1 v-if="portfolio && portfolio.portfolio">{{ portfolio.portfolio.title }}</h1>
+    <div v-if="portfolio && portfolio.portfolio">categoria:{{ portfolio.portfolio.category.name }}</div>
+    <div v-if="portfolio && portfolio.portfolio">
+      <span v-for="tag in portfolio.portfolio.tags" :key="tag.id">
+        {{ tag.name }}
+      </span>
+    </div>
+    <div v-if="portfolio && portfolio.portfolio" >
+      <img :src="portfolio.portfolio.image" :alt="portfolio.portfolio.title">
+    </div>
     <div v-if="portfolio && portfolio.portfolio" v-html="portfolio.portfolio.text"></div>
   </div>
 </template>
