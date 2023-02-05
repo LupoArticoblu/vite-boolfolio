@@ -1,21 +1,18 @@
 <script>
 import axios from 'axios';
-// se va all/'interno del template dovrò scriverlo dentro data 
-import { baseUrl } from '../Functions/data';
+import { baseUrl } from '../Functions/data'
 
- 
 export default{
   name: 'Show',
   data(){
     return{
-      portfolio: {}
+      portfolio: {},
     }
   },
   methods:{
     getApi(){
       axios.get(baseUrl + 'portfolios/' + this.$route.params.slug)
         .then(result => {
-          console.log(result.data);
           this.portfolio = result.data;
         });
     }
@@ -28,11 +25,11 @@ export default{
 </script>
 
 <template>
-  <h1>{{ portfolio.title }}</h1>
-  <div v-html="portfolio.text"></div>
+  <div >
+    <h1 v-if="portfolio && portfolio.portfolio">{{ portfolio.portfolio.title }}</h1>
+    <div v-if="portfolio && portfolio.portfolio" v-html="portfolio.portfolio.text"></div>
+  </div>
 </template>
-
-
 
 <style scoped lang="scss">
   
